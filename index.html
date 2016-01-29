@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>UTrack!</title>
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/utrack.css"/>
+</head>
+<body>
+
+    <div id="app-container" class="container">
+
+        <header>
+            <h1>UTrack! <small>Track and analyze data that matters to you!</small></h1>
+        </header>
+
+        <div id="nav_div">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li id="nav-input-tab" class="active"><a href="#input">Input</a></li>                
+                        <li id="nav-analysis-tab"><a href="#analysis">Analysis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="input-div">
+            <form id="input-form">
+                <div class="form-group">
+                    <label for="activity">
+                        Activity:
+                    </label>          
+                    <input type="text" class="form-control" id="activity" placeholder="Please Enter Your Shortage Activity Here :)">
+                    </input>
+                </div>
+
+                <div class="form-group">
+                    <label for="energy">
+                        Energy Level:
+                    </label>
+                    <input class="input_mth" id="energy" type="range" min="1" max="5" value="3">
+                    <span>  
+                    </span>
+                    <span class="to_right">
+                        (1 : Exhausted, 5 : Very Awake)
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="stress">
+                        Stress Level:
+                    </label>
+                    <input class="input_mth" id="stress" type="range" min="1" max="5" value="3">
+                    <span>
+                    </span>
+                    <span class="to_right">
+                        (1 : Very stressed, 5 : Very Relaxed)
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="happiness">
+                        Hapiness Level:
+                    </label>
+
+                    <input class="input_mth" id="happiness" type="range" min="1" max="5" value="3">
+
+                    <span> 
+                    </span>
+                    <span class="to_right">
+                        (1 : Depressed, 5 : Very Happy)
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">
+                        Time Spent:
+                    </label>
+                    <div class="time_cost">Hours:
+
+                    <select class="form-control" id="Hours" value="0">
+                    <option>0</option>
+                    <option>1</option> <option>2</option> <option>3</option>
+                    <option>4</option>
+                    </select>
+
+                    </div>
+
+                    <div class="time_cost">Minutes:
+
+                    <select class="form-control" id="Mins" value="0">
+                    <option>0</option> <option>5</option> <option>10</option>
+                    <option>15</option> <option>20</option> <option>25</option>
+                    <option>30</option> <option>35</option> <option>40</option>
+                    <option>45</option> <option>50</option> <option>55</option>
+                    </select>
+
+                    </div>
+                </div>
+                <ul class="list-inline">
+                    <li>
+                        <strong>Last Submitted Time:</strong>
+                    </li>
+                    <li id="LAST_SUMMIT"> 
+                    </li>
+                </ul>
+
+                <div class="submit_btn"><input class="btn btn-primary" type="button" id="INP_TO_SUMM" value="SUBMIT"></div>
+            </form>
+        </div>
+
+        <div id="analysis-div" class="hidden">
+            <!-- Put HTML here to support users in analyzing their data -->
+            <div class="row row-padding">
+                <div id="graph-control" class="col-md-4 text-center">
+                    <h3>Views:  </h3>
+                    <div class="col-md-4">
+                        <div class="radio ">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="data_catch" value="List_OBJ" checked><strong>Tables</strong></label>
+                        </div>
+
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="stat_catch" value="TIME_NEED_GRPH"><strong>Graph</strong></label>
+                        </div>
+                    </div>
+                </div>
+                <div id="GRA_SHOW" class="col-md-6" >
+                    <h3 id="gr_til" class="text-right">Table Of Activities</h3>
+                    <div id="table_sample">
+                        <table class="graph-view table table-striped table-hover table-responsive" id="List_OBJ">
+                            <thead>
+                                <tr id="tab_header">
+                                    <th >Activity</th>
+                                    <th>Time Spent</th>
+                                    <th>Energy</th>
+                                    <th>Stress</th>
+                                    <th>Happiness</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="graph_sample" class="hidden">
+                        <canvas id="canvas" width="550" height="450">
+
+                        </canvas>
+                    </div>
+                </div>
+                <p id="Hide_Forever">No DATA Displayed!</p>
+            </div>
+        </div>
+
+        <footer>
+            <div id="gen-fake-data">
+
+                <button class="btn btn-info">Generate Fake Data</button>
+
+            </div>
+
+            <div id="unit-tests">
+
+            
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="js/ext/underscore.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/utrack.js"></script>
+</body>
+</html>

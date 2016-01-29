@@ -1,0 +1,97 @@
+/* Put any additional CSS here */
+
+.row-padding { margin-top: 40px;}
+
+#graph-control { 
+	margin: 20px 20px 20px 20px;
+}
+
+#bar-graph {
+	height: 500px;
+	width: 1000px;
+}
+
+#input-div{
+  	padding: 30px 250px;
+}
+
+#analysis-div{
+	padding: 30px 130px;
+}
+
+.nav{
+	margin-top: 20px;
+}
+
+form {
+	margin: 20px;
+}
+
+.form-group {
+	margin-top: 20px;
+}
+
+.to_right{
+	float: right;
+}
+
+.time_cost {
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 20px;	
+}
+
+.radio label {
+	display: block;
+  	padding: 4px 4px;
+  	float: center;
+}
+
+.list-inline{
+	margin-top: 25px;
+	margin-left: -5px;
+
+}
+
+.submit_btn {
+	margin-top: 20px;
+	margin-left: 260px;
+
+}
+
+#gr_til{
+	margin-left: 130px;
+}
+
+#data_catch{
+	display: inline;
+}
+
+#Hide_Forever{
+	float: right;
+	margin-right: 150px;
+	color: #900000;
+	font-size: 25px;
+}
+
+h3 {
+	margin: 0px 20px 20px 20px;
+	float: left;
+}
+
+table{
+	text-align: center;
+}
+
+footer div {
+  display: inline-block;
+  margin-right: -135px;
+  margin-bottom: 40px;
+  margin-left: 150px;
+  margin-top: -25px;
+}
+
+footer a {
+	text-decoration: none;
+	color: black;
+}
